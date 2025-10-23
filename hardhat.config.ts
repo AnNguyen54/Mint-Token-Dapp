@@ -5,7 +5,7 @@ import "hardhat-contract-sizer";
 import "hardhat-abi-exporter";
 import "hardhat-gas-reporter";
 import * as dotenv from "dotenv";
-//import "hardhat-deploy";
+import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 import "@nomicfoundation/hardhat-ethers";
 import "@typechain/hardhat";
