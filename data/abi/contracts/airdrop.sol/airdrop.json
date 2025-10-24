@@ -462,6 +462,19 @@
     {
         "inputs": [
             {
+                "internalType": "uint256",
+                "name": "_upgradeAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "setUpgradeAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
                 "internalType": "bytes4",
                 "name": "interfaceId",
                 "type": "bytes4"
@@ -486,6 +499,19 @@
                 "internalType": "contract MyMintableToken",
                 "name": "",
                 "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "upgradeAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",

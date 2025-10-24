@@ -13,7 +13,9 @@ contract airdrop is Initializable, AccessControlUpgradeable, UUPSUpgradeable {
 
     bytes32 public merkleRoot;
     MyMintableToken public token;
+    
     mapping(address => bool) public claimed;
+    uint256 public upgradeAmount;
 
     event MerkleRootUpdated(bytes32 newRoot);
     event Claimed(address indexed account, uint256 amount);
@@ -38,6 +40,11 @@ contract airdrop is Initializable, AccessControlUpgradeable, UUPSUpgradeable {
     function setMerkleRoot(bytes32 root) external onlyRole(ROOT_ROLE) {
         merkleRoot = root;
         emit MerkleRootUpdated(root);
+    }
+
+    function setUpgradeAmount(uint256 _upgradeAmount) public
+    { 
+        upgradeAmount = _upgradeAmount;
     }
 
     // Người dùng claim token nằm trong whitelist

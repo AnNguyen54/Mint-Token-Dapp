@@ -2,6 +2,9 @@ import { ethers, network } from "hardhat";
 import fs from "fs";
 
 async function main() {
+  const provider = new ethers.JsonRpcProvider("https://eth-sepolia.public.blastapi.io");
+  console.log("Private key length:", process.env.TESTNET_PRIVATE_KEY?.length,provider);
+
   const [deployer] = await ethers.getSigners();
   console.log("🧪 Testing on network:", network.name);
   console.log("Deployer address:", deployer.address);

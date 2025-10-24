@@ -44,6 +44,10 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
             merkleRoot, 
           ],
         },
+        onUpgrade:{
+          methodName: "setUpgradeAmount",
+          args:[0],
+        }
       },
     },
     contract: "airdrop",
